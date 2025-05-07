@@ -7,17 +7,30 @@
         <title>To Do List</title>
         <style>
             header{
-                background-color: #0C120C;
                 border-bottom: solid 3px #6D7275;
+            }
+            body{
+                margin: 0px;
+                overflow: hidden;
+            }
+            img{
+                size: cover;
+                width: 100%;
+                opacity: 0.9;
+                max-height: 100vh;
+                z-index: -1000;
+                position: absolute;
+                display: block;
             }
             /*L'INPUT*/
             #taskValue{
                 height: 30px;
-                border: solid 3px rgb(45, 204, 45);
+                width: 20vw;
+                border: solid 3px #9e7f69;
                 border-radius: 5px;
                 position: absolute;
                 top: 40%;
-                left: 20%;
+                left: 30%;
                 -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
             }
@@ -25,62 +38,56 @@
             #newTask{
                 border-radius: 5px;
                 color: white;
-                font-size: 16px;
+                font-size: 1rem;
                 cursor: pointer;
                 height: 50px;
                 width: 100px;
                 border: none;
-                background-color: rgb(45, 204, 45);
+                background-color: #604331;
                 margin: 0;
                 position: absolute;
                 top: 50%;
-                left: 20%;
+                left: 30%;
                 -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
             }
 
-            body{
-                margin: 0px;
-                background-color: #C7D6D5 !important;
-            }
             /*LA DIV CONTENAIRE*/
             #centerColumn{
-                border-left: solid 2px rgb(45, 204, 45);
-                border-right: solid 2px rgb(45, 204, 45);
-                margin-left: auto;
+                margin: auto 10%;
+                margin-left: 50%;
                 margin-right: auto;
                 width: 40%;
                 height: auto;
-                background-color: #9AA899 !important;
             }
             /*LA DIV QUI CONTIENT LES TACHES*/
             #taskList{
-                padding-top: 1px;
-                padding-left: 5px;
-                padding-right: 5px;
-                padding-bottom: 5px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-                height: auto;
-                background-color: #9AA899;
+                padding: 4px 10px;
+                margin: 10vh auto;
+                width: 30vw;
+                height: 70vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                transition: all 0.5s ease-in-out;
             }
             .task{
-                min-height: 100px;
+                min-height: 40px;
                 word-wrap: break-word;
                 font-size: 25px;
                 border-radius:5px;
-                border: solid 3px #54577C;
+                border: solid 3px #7f5f50;
                 margin-top: 5px;
-                background-color: #ECEBF3;
-                width: 100%;
-                height: auto;
+                background-color: #000;
+                width: 85%;
+                height: auto !important;
+                padding: 5px;
             }
-        </style> 
+        </style>
         <script type="module" src='./to-do-list/to-do-list.js'></script>   
     </head>
 
     <body>
+        <img src="./notebook_bg.jpg" alt="notebook">
         <header>
             <input id="taskValue"> <!--pour écrire les tâches-->
             <button id="newTask">New Task</button> <!--pour ajouter une tâche-->
